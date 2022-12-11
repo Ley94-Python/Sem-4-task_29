@@ -6,24 +6,18 @@
 
 // // 6, 1, 33 -> [6, 1, 33]
 
-int [] arr = new int [8];
-int n = arr.Length;
-Console.Write("Введите длину массива через запятую: ");
-Console.ReadLine();
-void FillArray(int[]arr)
+ 
+
+int [] arr;
+int number;
+Console.WriteLine("Введите длину массива: ");
+number = Convert.ToInt32(Console.ReadLine());
+arr = new int [number];
+
+for (int i = 0; i < number; i++)
 {
-for (int i = 0; i < arr.Length; i++);
-
+arr[i] = new Random().Next(0, 9);
 }
+Console.Write($"{number} -> [" + String.Join(", ", arr) + "]");
 
-void PrintArray(int[]arr)
-{
-{
-for (int i = 0; i < arr.Length; i++);
 
-}
-Console.Write("-> [" + String.Join(", ", arr) + "]");
-}
-
-FillArray(arr);
-PrintArray(arr);
